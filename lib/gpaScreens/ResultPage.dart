@@ -7,18 +7,22 @@ class ResultPage extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return  Material(
-      color: Colors.deepOrange,
+      color: Colors.lime,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-           Text("Your CGPA is: ",style:  TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 40.0)),
+           Text("Your CGPA is: ",style:  TextStyle(color: Colors.grey,
+               fontWeight: FontWeight.bold,fontSize: 40.0)),
            Text(score.toStringAsFixed(score.truncateToDouble() == score ? 0 : 2),
-              style:  TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 50.0)),
+              style:  TextStyle(color: Colors.black,fontWeight: FontWeight.bold,
+                  fontSize: 50.0)),
            IconButton(
             icon:  Icon(Icons.restore,size: 30.0,),
-            color: Colors.white,
+            color: Colors.grey,
             iconSize: 50.0,
-            onPressed: ()=>Navigator.of(context).pushAndRemoveUntil( MaterialPageRoute(builder:(BuildContext context)=>new HomePage()), (Route route)=>route==null),
+            onPressed: ()=>Navigator.of(context).pushAndRemoveUntil( MaterialPageRoute
+              (builder:(BuildContext context)=>new HomePage()),
+                    (Route route)=>route==null),
           )
         ],
       ),

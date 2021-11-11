@@ -43,7 +43,7 @@ class GPAcalcstate extends State<cgpaCalc> {
                Text(
                 "Semester ${i+1}:",
                 style:  TextStyle(
-                    color: Colors.black87, fontWeight: FontWeight.bold),
+                    color: Colors.teal, fontWeight: FontWeight.bold),
               ),
                Padding(
                 padding:  EdgeInsets.all(10.0),
@@ -63,15 +63,15 @@ class GPAcalcstate extends State<cgpaCalc> {
                 ),
               ),
               Padding(
-                padding:  EdgeInsets.all(35.0),
+                padding:  EdgeInsets.all(40.0),
               ),
 
               //credit er textField
               SizedBox(
-                width: 60.0,
+                width: 100.0,
                 child: TextField(
                   keyboardType: TextInputType.number,
-                  decoration: InputDecoration(hintText: "CREDIT"),
+                  decoration: InputDecoration(hintText: "CREDIT HOUR"),
                   onChanged: (s) {
                     setState(() {
                       _creditController[i] = s;
@@ -101,7 +101,7 @@ class GPAcalcstate extends State<cgpaCalc> {
       ),
          Text(
           "SGPA",
-          overflow: TextOverflow.ellipsis,
+          overflow: TextOverflow.visible,
           style:  TextStyle(fontWeight: FontWeight.bold,fontSize: 17.0),
         ),
          Padding(
@@ -109,7 +109,7 @@ class GPAcalcstate extends State<cgpaCalc> {
         ),
          Text(
           "Credits",
-          overflow: TextOverflow.ellipsis,
+          overflow: TextOverflow.visible,
           style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17.0),
         ),
          Padding(
@@ -127,7 +127,7 @@ class GPAcalcstate extends State<cgpaCalc> {
 
             RaisedButton(
               padding: EdgeInsets.all(10.0),
-              color: Colors.deepOrange,
+              color: Colors.cyan,
               child: Text("Calculate CGPA",
               style: TextStyle(fontSize: 30.0,color: Colors.white),),
               onPressed: () {
